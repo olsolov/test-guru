@@ -29,25 +29,25 @@ questions = Question.create!([
                              ])
 
 answers = Answer.create!([
-                           { body: 'dcase()', question_id: question[0].id },
-                           { body: 'downcase()', correct: true, question_id: question[0].id },
-                           { body: 'down()', question_id: question[0].id },
-                           { body: 'lowercase()', question_id: question[0].id },
-                           { body: 'upcase()', question_id: question[0].id },
-                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question_id: question[1].id },
-                           { body: 'Объект — это программная модель какого-то реально существующего объекта', question_id: question[1].id },
-                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question_id: question[1].id },
-                           { body: 'Все ответы верны', correct: true, question_id: question[1].id },
-                           { body: 'config.time_zone =', correct: true, question_id: question[2].id },
-                           { body: 'time_zone =', question_id: question[2].id },
-                           { body: 'Все ответы верны', correct: true, question_id: question[2].id },
-                           { body: 'Это облачное хранилище', question_id: question[3].id },
-                           { body: 'Это сервер для ваших проектов', question_id: question[3].id },
-                           { body: 'Это таск-менеджер', question_id: question[3].id },
-                           { body: 'Это распределённая система управления версиями', correct: true, question_id: question[3].id },
-                           { body: 'git merge', question_id: question[4].id },
-                           { body: 'pull request', question_id: question[4].id },
-                           { body: 'Все ответы верны', correct: true, question_id: question[4].id }
+                           { body: 'dcase()', question_id: questions[0].id },
+                           { body: 'downcase()', correct: true, question_id: questions[0].id },
+                           { body: 'down()', question_id: questions[0].id },
+                           { body: 'lowercase()', question_id: questions[0].id },
+                           { body: 'upcase()', question_id: questions[0].id },
+                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question_id: questions[1].id },
+                           { body: 'Объект — это программная модель какого-то реально существующего объекта', question_id: questions[1].id },
+                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question_id: questions[1].id },
+                           { body: 'Все ответы верны', correct: true, question_id: questions[1].id },
+                           { body: 'config.time_zone =', correct: true, question_id: questions[2].id },
+                           { body: 'time_zone =', question_id: questions[2].id },
+                           { body: 'Все ответы верны', correct: true, question_id: questions[2].id },
+                           { body: 'Это облачное хранилище', question_id: questions[3].id },
+                           { body: 'Это сервер для ваших проектов', question_id: questions[3].id },
+                           { body: 'Это таск-менеджер', question_id: questions[3].id },
+                           { body: 'Это распределённая система управления версиями', correct: true, question_id: questions[3].id },
+                           { body: 'git merge', question_id: questions[4].id },
+                           { body: 'pull request', question_id: questions[4].id },
+                           { body: 'Все ответы верны', correct: true, question_id: questions[4].id }
                          ])
 
 users = User.create!([
@@ -55,8 +55,8 @@ users = User.create!([
                        { name: 'New_user', role: 'user' }
                      ])
 
-results = Result.create!([
-                           { user_id: users[1].id, test_id: tests[0].id },
-                           { user_id: users[1].id, test_id: tests[2].id },
-                           { user_id: users[1].id, test_id: tests[4].id }
-                         ])
+# results = Result.create!([
+#                            { user_id: users[1].id, test_id: tests[0].id },
+#                            { user_id: users[1].id, test_id: tests[2].id },
+#                            { user_id: users[1].id, test_id: tests[4].id }
+#                          ])
