@@ -21,31 +21,33 @@ tests = Test.create!([
                      ])
 
 questions = Question.create!([
-                               { body: 'Какой метод позволяет перевести строку в нижний регистр?' },
-                               { body: 'Что такое объект в ООП?' },
-                               { body: 'Как добавить в конфигурацию Rails приложения часовой пояс?' },
-                               { body: 'Что такое Git?' },
-                               { body: 'Какими способами можно слить две ветки?' }
+                               { body: 'Какой метод позволяет перевести строку в нижний регистр?', test_id: tests[0].id },
+                               { body: 'Что такое объект в ООП?', test_id: tests[1].id },
+                               { body: 'Как добавить в конфигурацию Rails приложения часовой пояс?', test_id: tests[2].id },
+                               { body: 'Что такое Git?', test_id: tests[3].id },
+                               { body: 'Какими способами можно слить две ветки?', test_id: tests[4].id }
                              ])
 
 answers = Answer.create!([
-                           { body: 'dcase()' },
-                           { body: 'downcase()', correct: true },
-                           { body: 'down()' },
-                           { body: 'lowercase()' },
-                           { body: 'upcase()' },
-                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.' },
-                           { body: 'Объект — это программная модель какого-то реально существующего объекта' },
-                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса' },
-                           { body: 'Все ответы верны', correct: true },
-                           { body: 'config.time_zone =', correct: true },
-                           { body: 'time_zone =' },
-                           { body: 'Это облачное хранилище' },
-                           { body: 'Это сервер для ваших проектов' },
-                           { body: 'Это таск-менеджер' },
-                           { body: 'Это распределённая система управления версиями', correct: true },
-                           { body: 'git merge' },
-                           { body: 'pull request' }
+                           { body: 'dcase()', question_id: question[0].id },
+                           { body: 'downcase()', correct: true, question_id: question[0].id },
+                           { body: 'down()', question_id: question[0].id },
+                           { body: 'lowercase()', question_id: question[0].id },
+                           { body: 'upcase()', question_id: question[0].id },
+                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question_id: question[1].id },
+                           { body: 'Объект — это программная модель какого-то реально существующего объекта', question_id: question[1].id },
+                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question_id: question[1].id },
+                           { body: 'Все ответы верны', correct: true, question_id: question[1].id },
+                           { body: 'config.time_zone =', correct: true, question_id: question[2].id },
+                           { body: 'time_zone =', question_id: question[2].id },
+                           { body: 'Все ответы верны', correct: true, question_id: question[2].id },
+                           { body: 'Это облачное хранилище', question_id: question[3].id },
+                           { body: 'Это сервер для ваших проектов', question_id: question[3].id },
+                           { body: 'Это таск-менеджер', question_id: question[3].id },
+                           { body: 'Это распределённая система управления версиями', correct: true, question_id: question[3].id },
+                           { body: 'git merge', question_id: question[4].id },
+                           { body: 'pull request', question_id: question[4].id },
+                           { body: 'Все ответы верны', correct: true, question_id: question[4].id }
                          ])
 
 users = User.create!([
