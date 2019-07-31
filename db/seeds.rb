@@ -6,57 +6,61 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# rubocop: disable all
+
 categories = Category.create!([
                                 { title: 'Ruby' },
                                 { title: 'Ruby on Rails' },
                                 { title: 'Git' }
                               ])
 
-tests = Test.create!([
-                       { title: 'Основы Ruby', level: 1, category_id: categories[0].id },
-                       { title: 'ООП в Ruby', level: 2, category_id: categories[0].id },
-                       { title: 'Основы Ruby on Rails', level: 1, category_id: categories[1].id },
-                       { title: 'Основы Git', level: 1, category_id: categories[2].id },
-                       { title: 'Git branch', level: 2, category_id: categories[2].id }
-                     ])
-
-questions = Question.create!([
-                               { body: 'Какой метод позволяет перевести строку в нижний регистр?', test_id: tests[0].id },
-                               { body: 'Что такое объект в ООП?', test_id: tests[1].id },
-                               { body: 'Как добавить в конфигурацию Rails приложения часовой пояс?', test_id: tests[2].id },
-                               { body: 'Что такое Git?', test_id: tests[3].id },
-                               { body: 'Какими способами можно слить две ветки?', test_id: tests[4].id }
-                             ])
-
-answers = Answer.create!([
-                           { body: 'dcase()', question_id: questions[0].id },
-                           { body: 'downcase()', correct: true, question_id: questions[0].id },
-                           { body: 'down()', question_id: questions[0].id },
-                           { body: 'lowercase()', question_id: questions[0].id },
-                           { body: 'upcase()', question_id: questions[0].id },
-                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question_id: questions[1].id },
-                           { body: 'Объект — это программная модель какого-то реально существующего объекта', question_id: questions[1].id },
-                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question_id: questions[1].id },
-                           { body: 'Все ответы верны', correct: true, question_id: questions[1].id },
-                           { body: 'config.time_zone =', correct: true, question_id: questions[2].id },
-                           { body: 'time_zone =', question_id: questions[2].id },
-                           { body: 'Все ответы верны', correct: true, question_id: questions[2].id },
-                           { body: 'Это облачное хранилище', question_id: questions[3].id },
-                           { body: 'Это сервер для ваших проектов', question_id: questions[3].id },
-                           { body: 'Это таск-менеджер', question_id: questions[3].id },
-                           { body: 'Это распределённая система управления версиями', correct: true, question_id: questions[3].id },
-                           { body: 'git merge', question_id: questions[4].id },
-                           { body: 'pull request', question_id: questions[4].id },
-                           { body: 'Все ответы верны', correct: true, question_id: questions[4].id }
-                         ])
-
 users = User.create!([
                        { name: 'Olga', role: 'admin' },
                        { name: 'New_user', role: 'user' }
                      ])
 
-# results = Result.create!([
-#                            { user_id: users[1].id, test_id: tests[0].id },
-#                            { user_id: users[1].id, test_id: tests[2].id },
-#                            { user_id: users[1].id, test_id: tests[4].id }
-#                          ])
+tests = Test.create!([
+                       { title: 'Основы Ruby', level: 1, category: categories[0], author: users[0] },
+                       { title: 'ООП в Ruby', level: 2, category: categories[0], author: users[0] },
+                       { title: 'Основы Ruby on Rails', level: 1, category: categories[1], author: users[0] },
+                       { title: 'Основы Git', level: 1, category: categories[2], author: users[0] },
+                       { title: 'Git branch', level: 2, category: categories[2], author: users[0] }
+                     ])
+
+questions = Question.create!([
+                               { body: 'Какой метод позволяет перевести строку в нижний регистр?', test: tests[0] },
+                               { body: 'Что такое объект в ООП?', test: tests[1] },
+                               { body: 'Как добавить в конфигурацию Rails приложения часовой пояс?', test: tests[2] },
+                               { body: 'Что такое Git?', test: tests[3] },
+                               { body: 'Какими способами можно слить две ветки?', test: tests[4] }
+                             ])
+
+answers = Answer.create!([
+                           { body: 'dcase()', question: questions[0] },
+                           { body: 'downcase()', correct: true, question: questions[0] },
+                           { body: 'down()', question: questions[0] },
+                           { body: 'lowercase()', question: questions[0] },
+                           { body: 'upcase()', question: questions[0] },
+                           { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question: questions[1] },
+                           { body: 'Объект — это программная модель какого-то реально существующего объекта', question: questions[1] },
+                           { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question: questions[1] },
+                           { body: 'Все ответы верны', correct: true, question: questions[1] },
+                           { body: 'config.time_zone =', correct: true, question: questions[2] },
+                           { body: 'time_zone =', question: questions[2] },
+                           { body: 'Все ответы верны', correct: true, question: questions[2] },
+                           { body: 'Это облачное хранилище', question: questions[3] },
+                           { body: 'Это сервер для ваших проектов', question: questions[3] },
+                           { body: 'Это таск-менеджер', question: questions[3] },
+                           { body: 'Это распределённая система управления версиями', correct: true, question: questions[3] },
+                           { body: 'git merge', question: questions[4] },
+                           { body: 'pull request', question: questions[4] },
+                           { body: 'Все ответы верны', correct: true, question: questions[4] }
+                         ])
+
+tests_user = TestsUser.create!([
+                                 { user: users[1], test: tests[0] },
+                                 { user: users[1], test: tests[2] },
+                                 { user: users[1], test: tests[4] }
+                               ])
+
+# rubocop: enable all
