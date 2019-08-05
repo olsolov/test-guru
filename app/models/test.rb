@@ -13,12 +13,15 @@ class Test < ApplicationRecord
   scope :order_title_desc, lambda { |category|
                              joins(:category).where(categories: { title: category })
                                              .order('tests.title DESC')
-                                             .pluck('tests.title')
                            }
 
   validates :title, presence: true, uniqueness: { scope: :level,
                                                   message: 'Сan be only one test with this name and level' }
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
+  def self.pluck_title_desc(category)
+    order_title_desc(category).pluck('tests.title')
+  end
 
   # def self.order_title_desc(category)
   #   joins(:category).where(categories: { title: category })
