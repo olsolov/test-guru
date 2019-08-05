@@ -15,8 +15,8 @@ categories = Category.create!([
                               ])
 
 users = User.create!([
-                       { name: 'Olga', role: 'admin' },
-                       { name: 'New_user', role: 'user' }
+                       { name: 'Olga', role: 'admin', email: 'admin@gmail.com' },
+                       { name: 'New_user', role: 'user', email: 'new_user@gmail.com' }
                      ])
 
 tests = Test.create!([
@@ -40,7 +40,6 @@ answers = Answer.create!([
                            { body: 'downcase()', correct: true, question: questions[0] },
                            { body: 'down()', question: questions[0] },
                            { body: 'lowercase()', question: questions[0] },
-                           { body: 'upcase()', question: questions[0] },
                            { body: 'Объект — это сущность, служащая контейнером для данных и управляющая доступом к этим данным.', question: questions[1] },
                            { body: 'Объект — это программная модель какого-то реально существующего объекта', question: questions[1] },
                            { body: 'Объект — cущность в адресном пространстве вычислительной системы, появляющаяся при создании экземпляра класса', question: questions[1] },
