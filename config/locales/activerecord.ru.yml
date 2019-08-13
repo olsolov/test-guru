@@ -14,9 +14,7 @@ ru:
         author_id: 'Автор'
       question:
         body: 'Вопрос'
-
-
-
+        
     errors:
       messages:
         blank: 'не может быть пустым'
