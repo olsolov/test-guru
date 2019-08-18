@@ -19,3 +19,4 @@ ru:
       messages:
         blank: 'не может быть пустым'
         required: 'не указан(а)'
+        record_invalid: 'Возникли ошибки: %{errors}'

@@ -2,10 +2,10 @@ class Test < ApplicationRecord
   MAX_LEVEL = Float::INFINITY
 
   belongs_to :category
-  belongs_to :author, class_name: 'User', foreign_key: 'author_id'
+  belongs_to :author, class_name: 'User', foreign_key: :author_id
+  has_many :test_passages
+  has_many :users, through: :test_passages
   has_many :questions, dependent: :nullify
-  has_many :tests_users, dependent: :nullify
-  has_many :users, through: :tests_users
 
   scope :easy, -> { where(level: 0..1) }
   scope :middle, -> { where(level: 2..4) }
