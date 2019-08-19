@@ -22,7 +22,7 @@ class TestPassage < ApplicationRecord
   end
 
   def test_success
-    ((correct_questions / test_questions_count.to_f) * 100).to_i
+    ((correct_questions / test_questions_count.to_f) * 100).round(0)
   end
 
   def current_question_number
@@ -44,10 +44,15 @@ class TestPassage < ApplicationRecord
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-      correct_answers_count == answer_ids.count
+    # correct_answers_count = correct_answers.count
+    #
+    # (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
+    # correct_answers_count == answer_ids.count
+    if answer_ids
+      correct_answers.ids.sort == answer_ids.map(&:to_i).sort
+    else
+      false
+    end
   end
 
   def correct_answers
