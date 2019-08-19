@@ -56,10 +56,4 @@ answers = Answer.create!([
                            { body: 'Все ответы верны', correct: true, question: questions[4] }
                          ])
 
-tests_user = TestsUser.create!([
-                                 { user: users[1], test: tests[0] },
-                                 { user: users[1], test: tests[2] },
-                                 { user: users[1], test: tests[4] }
-                               ])
-
 # rubocop: enable all
