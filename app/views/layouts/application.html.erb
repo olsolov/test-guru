@@ -12,6 +12,7 @@
   <body>
     <% if logged_in? %>
       <p class="nav user">Welcome, <b><%= current_user.email %></b> Guru</p>
+      <%= link_to "Log out", logout_path, method: :delete %>
     <% end %>
 
     <%= yield %>
