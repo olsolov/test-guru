@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_190_814_203_051) do
+ActiveRecord::Schema.define(version: 20_190_825_173_821) do
   create_table 'answers', force: :cascade do |t|
     t.string 'body', null: false
     t.boolean 'correct', default: false, null: false
@@ -63,10 +63,10 @@ ActiveRecord::Schema.define(version: 20_190_814_203_051) do
   end
 
   create_table 'users', force: :cascade do |t|
-    t.string 'name', null: false
-    t.string 'role', null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.string 'email', null: false
+    t.string 'password_digest'
+    t.index ['email'], name: 'index_users_on_email', unique: true
   end
 end
