@@ -1,29 +1,14 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  before_action :configure_permitted_parameters, if: :devise_controller?
 
-  helper_method :current_user,
-                :logged_in?,
-                :log_out
-
-  private
-
-  def authenticate_user!
-    cookies[:redirect_path] = request.path
-    return redirect_to login_path, alert: 'Please log in to access this resource' unless current_user
-
-    cookies[:email] = current_user.email
+  def after_sign_in_path_for(user)
+    user.admin? ? admin_tests_path : super
   end
 
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
+  protected
 
-  def logged_in?
-    current_user.present?
-  end
-
-  def log_out
-    session.delete(:user_id)
-    @current_user = nil
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
   end
 end
