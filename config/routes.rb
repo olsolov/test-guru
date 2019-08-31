@@ -4,16 +4,12 @@ Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }, controllers: { sessions: 'users/sessions' }
 
   resources :tests, only: :index do
-    member do
-      post :start
-    end
+    post :start, on: :member
   end
 
   # GET /test_passages/101/result
   resources :test_passages, only: %i[show update] do
-    member do
-      get :result
-    end
+    get :result, on: :member
   end
 
   namespace :admin do
