@@ -1,15 +1,15 @@
-ru:
+en:
   activerecord:
     models:
-      test: 'Тест'
-      question: 'Вопрос'
+      test: 'Test'
+      question: 'Question'
 
     attributes:
       test:
-        title: 'Название'
-        
+        title: 'Title'
+
     errors:
       messages:
-        blank: 'не может быть пустым'
+        blank: "can't be blank"
 #        required: 'не указан(а)'
 #        record_invalid: 'Возникли ошибки: %{errors}'
