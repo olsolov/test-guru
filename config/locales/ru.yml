@@ -28,15 +28,53 @@ ru:
   tests:
     index:
       header: 'Доступные тесты'
+      title_test: 'Название'
+      level: 'Уровень'
+      quantity: 'Количество вопросов'
+    test:
+      start: 'Старт'
+      test_levels:
+        easy: 'Легкий'
+        elementary: 'Начальный'
+        advanced: 'Продвинутый'
+        hard: 'Трудный'
+        hero: 'Герой'
 
   test_passages:
+    show:
+      passing_test: "Прохождение теста: %{test}"
+      question: 'Вопрос:'
+      next: 'Следующий'
     result:
       header: "Тест %{title} успешно завершён!"
+      correct_answers: 'Правильные ответы:'
+      test_success: 'Тест успешно пройден.'
+      test_fail: 'Тест не пройден.'
+      test_list: 'Список тестов'
 
   admin:
     tests:
+      form:
+        create_test: 'Создать новый тест'
+        edit_test: "Редактировать %{test_title} тест"
+      test:
+        show: 'Посмотреть'
+        edit: 'Редактировать'
+        delete: 'Удалить'
+        delete_confirmation: 'Вы уверены?'
+        test_levels:
+          easy: 'Легкий'
+          elementary: 'Начальный'
+          advanced: 'Продвинутый'
+          hard: 'Трудный'
+          hero: 'Герой'
       index:
         header: 'Доступные тесты'
+        new_test: 'Новый тест'
+        title_test: 'Название'
+        level: 'Уровень'
+        quantity: 'Количество вопросов'
+        actions: 'Действия'
       create:
         success: 'Тест успешно создан.'
 

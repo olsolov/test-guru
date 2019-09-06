@@ -1,15 +1,24 @@
 module TestsHelper
-  TEST_LEVELS = { 0 => :easy, 1 => :elementary, 2 => :advanced, 3 => :hard }.freeze
-
   def test_level(test)
-    TEST_LEVELS[test.level] || :hero
+    case test.level
+    when 0
+      t('.test_levels.easy')
+    when 1
+      t('.test_levels.elementary')
+    when 2
+      t('.test_levels.advanced')
+    when 3
+      t('.test_levels.hard')
+    else
+      t('.test_levels.hero')
+    end
   end
 
   def test_header(test)
     if test.new_record?
-      'Create New Test'
+      t('.create_test')
     else
-      "Edit #{test.title} Test"
+      t('.edit_test', test_title: test.title)
     end
   end
 end
