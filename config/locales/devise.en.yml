@@ -21,6 +21,9 @@ en:
     mailer:
       confirmation_instructions:
         subject: "Confirmation instructions"
+        greeting: "Welcome %{email}!"
+        instruction: "You can confirm your account email through the link below:"
+        confirm_my_account: "Confirm my account"
       reset_password_instructions:
         subject: "Reset password instructions"
       unlock_instructions:
@@ -42,6 +45,7 @@ en:
       new:
         become_a_guru: "Become a Guru"
         sign_up: "Sign up"
+        minimum_password_length: "(%{count} characters minimum)"
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
