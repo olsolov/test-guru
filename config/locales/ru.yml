@@ -1,5 +1,9 @@
 ru:
-  hello: 'Привет'
+  easy: 'Легкий'
+  elementary: 'Начальный'
+  advanced: 'Продвинутый'
+  hard: 'Трудный'
+  hero: 'Герой'
 
   helpers:
     select:
@@ -35,12 +39,6 @@ ru:
       quantity: 'Количество вопросов'
     test:
       start: 'Старт'
-      test_levels:
-        easy: 'Легкий'
-        elementary: 'Начальный'
-        advanced: 'Продвинутый'
-        hard: 'Трудный'
-        hero: 'Герой'
 
   test_passages:
     show:
@@ -64,12 +62,6 @@ ru:
         edit: 'Редактировать'
         delete: 'Удалить'
         delete_confirmation: 'Вы уверены?'
-        test_levels:
-          easy: 'Легкий'
-          elementary: 'Начальный'
-          advanced: 'Продвинутый'
-          hard: 'Трудный'
-          hero: 'Герой'
       index:
         header: 'Доступные тесты'
         new_test: 'Новый тест'

@@ -30,7 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  easy: 'Easy'
+  elementary: 'Elementary'
+  advanced: 'Advanced'
+  hard: 'Hard'
+  hero: 'Hero'
 
   helpers:
     select:
@@ -64,12 +68,6 @@ en:
       quantity: 'Number of questions'
     test:
       start: 'Start'
-      test_levels:
-        easy: 'Easy'
-        elementary: 'Elementary'
-        advanced: 'Advanced'
-        hard: 'Hard'
-        hero: 'Hero'
 
   test_passages:
     show:

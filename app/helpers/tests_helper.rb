@@ -1,17 +1,8 @@
 module TestsHelper
+  TEST_LEVELS = { 0 => :easy, 1 => :elementary, 2 => :advanced, 3 => :hard }.freeze
+
   def test_level(test)
-    case test.level
-    when 0
-      t('.test_levels.easy')
-    when 1
-      t('.test_levels.elementary')
-    when 2
-      t('.test_levels.advanced')
-    when 3
-      t('.test_levels.hard')
-    else
-      t('.test_levels.hero')
-    end
+    t(TEST_LEVELS.fetch(test.level, :hero))
   end
 
   def test_header(test)
