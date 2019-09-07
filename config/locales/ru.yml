@@ -1,4 +1,5 @@
 ru:
+  hello_flash: "Привет, %{user_name}!"
   easy: 'Легкий'
   elementary: 'Начальный'
   advanced: 'Продвинутый'

@@ -30,6 +30,7 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  hello_flash: "Hello, %{user_name}!"
   easy: 'Easy'
   elementary: 'Elementary'
   advanced: 'Advanced'
