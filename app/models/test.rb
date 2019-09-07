@@ -22,10 +22,4 @@ class Test < ApplicationRecord
   def self.pluck_title_desc(category)
     order_title_desc(category).pluck('tests.title')
   end
-
-  # def self.order_title_desc(category)
-  #   joins(:category).where(categories: { title: category })
-  #                   .order('tests.title DESC')
-  #                   .pluck('tests.title')
-  # end
 end

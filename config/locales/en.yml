@@ -30,4 +30,77 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello_flash: "Hello, %{user_name}!"
+  easy: 'Easy'
+  elementary: 'Elementary'
+  advanced: 'Advanced'
+  hard: 'Hard'
+  hero: 'Hero'
+
+  helpers:
+    select:
+      prompt: 'Select a category'
+    submit:
+      test:
+        create: 'Create test'
+        update: 'Update test'
+      question:
+        create: 'Create question'
+        update: 'Update question'
+    label:
+      test:
+        title: 'Title'
+        level: 'Level'
+        category_id: 'Category'
+      question:
+        body: 'Question'
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: 'Tricky tests'
+      title_test: 'Title'
+      level: 'Level'
+      quantity: 'Number of questions'
+    test:
+      start: 'Start'
+
+  test_passages:
+    show:
+      passing_test: "Passing the %{test} Test"
+      question: 'Question:'
+    result:
+      header: "The %{title} test was completed!"
+      correct_answers: 'Сorrect answers:'
+      test_success: 'Test passed successfully.'
+      test_fail: 'Test failed.'
+      test_list: 'Test list'
+
+  admin:
+    tests:
+      form:
+        create_test: 'Create New Test'
+        edit_test: "Edit %{test_title} Test"
+      test:
+        show: 'Show'
+        edit: 'Edit'
+        delete: 'Delete'
+        delete_confirmation: 'Are you sure?'
+      index:
+        header: 'Tricky tests'
+        new_test: 'New test'
+        title_test: 'Title'
+        level: 'Level'
+        quantity: 'Number of questions'
+        actions: 'Actions'
+      create:
+        success: 'Test was successfully created.'
+
+  tests_mailer:
+    completed_test:
+      subject: 'You just completed the TestGuru test!'
