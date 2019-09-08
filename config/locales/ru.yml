@@ -1,6 +1,6 @@
 ru:
   hello_flash: "Привет, %{user_name}!"
-  welcome_html: "Здравствуйте, <b>%{user_name}</b>!"
+  welcome_html: "Здравствуйте, <b>%{user_name}</b>"
   easy: 'Легкий'
   elementary: 'Начальный'
   advanced: 'Продвинутый'
@@ -59,6 +59,8 @@ ru:
       test_list: 'Список тестов'
 
   admin:
+    nav:
+      admin_panel: 'Панель администратора'
     tests:
       form:
         create_test: 'Создать новый тест'
