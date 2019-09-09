@@ -30,7 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello_flash: "Hello, %{user_name}!"
+  hello_flash: "Hello, %{user_name}"
+  welcome_html: "Welcome, <b>%{user_name}</b>!"
   easy: 'Easy'
   elementary: 'Elementary'
   advanced: 'Advanced'
@@ -60,6 +61,11 @@ en:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      log_in: 'Log in'
+      log_out: 'Log out'
+      sign_up: 'Sign up'
+      admin_panel: 'Admin panel'
 
   tests:
     index:
@@ -82,6 +88,8 @@ en:
       test_list: 'Test list'
 
   admin:
+    nav:
+      admin_panel: 'Admin Panel'
     tests:
       form:
         create_test: 'Create New Test'
