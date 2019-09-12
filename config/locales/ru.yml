@@ -58,6 +58,9 @@ ru:
       test_success: 'Тест успешно пройден.'
       test_fail: 'Тест не пройден.'
       test_list: 'Список тестов'
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:

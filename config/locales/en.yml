@@ -86,6 +86,9 @@ en:
       test_success: 'Test passed successfully.'
       test_fail: 'Test failed.'
       test_list: 'Test list'
+      gist:
+        success: "Gist was successfuly created!"
+        failure: "Ann error occurred while saving gist"
 
   admin:
     nav:
