@@ -9,8 +9,10 @@ class TestPassagesController < ApplicationController
   def gist
     result = GistQuestionService.new(@test_passage.current_question).call
 
+    gist_url = result.html_url
+
     flash_options = if result.html_url.present?
-                      { notice: t('.success') }
+                      { notice: t('.success', url: gist_url) }
                     else
                       { alert: t('.failure') }
                     end
