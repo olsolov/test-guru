@@ -6,6 +6,8 @@ ru:
   advanced: 'Продвинутый'
   hard: 'Трудный'
   hero: 'Герой'
+  gist_description: "Вопрос из теста %{test_title} с ТестГуру"
+  gist_file_name: 'тест-гуру-вопрос.txt'
 
   helpers:
     select:

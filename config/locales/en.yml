@@ -37,6 +37,8 @@ en:
   advanced: 'Advanced'
   hard: 'Hard'
   hero: 'Hero'
+  gist_description: "A question about %{test_title} from TestGuru"
+  gist_file_name: 'test-guru-question.txt'
 
   helpers:
     select:
