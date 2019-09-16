@@ -85,6 +85,11 @@ ru:
         actions: 'Действия'
       create:
         success: 'Тест успешно создан.'
+    gists:
+      index:
+        question: 'Вопрос'
+        url: 'Ссылка на Гист'
+        user: 'Пользователь'
 
   tests_mailer:
     completed_test:

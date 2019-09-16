@@ -113,6 +113,11 @@ en:
         actions: 'Actions'
       create:
         success: 'Test was successfully created.'
+    gists:
+      index:
+        question: 'Question'
+        url: 'Gist url'
+        user: 'User'
 
   tests_mailer:
     completed_test:
