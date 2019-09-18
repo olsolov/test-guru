@@ -37,6 +37,8 @@ en:
   advanced: 'Advanced'
   hard: 'Hard'
   hero: 'Hero'
+  gist_description: "A question about %{test_title} from TestGuru"
+  gist_file_name: 'test-guru-question.txt'
 
   helpers:
     select:
@@ -86,6 +88,9 @@ en:
       test_success: 'Test passed successfully.'
       test_fail: 'Test failed.'
       test_list: 'Test list'
+      gist:
+        success: "Gist was successfuly created! Link to your gist: "
+        failure: "Ann error occurred while saving gist"
 
   admin:
     nav:
@@ -108,6 +113,11 @@ en:
         actions: 'Actions'
       create:
         success: 'Test was successfully created.'
+    gists:
+      index:
+        question: 'Question'
+        url: 'Gist url'
+        user: 'User'
 
   tests_mailer:
     completed_test:

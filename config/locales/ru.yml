@@ -6,6 +6,8 @@ ru:
   advanced: 'Продвинутый'
   hard: 'Трудный'
   hero: 'Герой'
+  gist_description: "Вопрос из теста %{test_title} с ТестГуру"
+  gist_file_name: 'тест-гуру-вопрос.txt'
 
   helpers:
     select:
@@ -58,6 +60,9 @@ ru:
       test_success: 'Тест успешно пройден.'
       test_fail: 'Тест не пройден.'
       test_list: 'Список тестов'
+    gist:
+      success: "Gist успешно сохранен! Ссылка на ваш gist: "
+      failure: "Во время сохранения gist произошла ошибка"
 
   admin:
     nav:
@@ -80,6 +85,11 @@ ru:
         actions: 'Действия'
       create:
         success: 'Тест успешно создан.'
+    gists:
+      index:
+        question: 'Вопрос'
+        url: 'Ссылка на Гист'
+        user: 'Пользователь'
 
   tests_mailer:
     completed_test:

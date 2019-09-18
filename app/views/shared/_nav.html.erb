@@ -4,7 +4,8 @@
   <span class="navbar-text">
 
     <% if user_signed_in? && current_user.admin? %>
-      <%= link_to t('.admin_panel'), admin_tests_path %>
+      <%= link_to t('.admin_panel'), admin_tests_path %> |
+      <%= link_to 'Gists', admin_gists_path %>
       <%= t('welcome_html', user_name: current_user.first_name) %> Guru |
       <%= link_to t('.log_out'), destroy_user_session_path, method: :delete %>
 
