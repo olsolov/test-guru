@@ -89,7 +89,7 @@ en:
       test_fail: 'Test failed.'
       test_list: 'Test list'
       gist:
-        success: "Gist was successfuly created! Link to your gist: %{url} "
+        success: "Gist was successfuly created! Link to your gist: "
         failure: "Ann error occurred while saving gist"
 
   admin:

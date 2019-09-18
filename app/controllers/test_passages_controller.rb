@@ -16,7 +16,7 @@ class TestPassagesController < ApplicationController
                   question_id: @test_passage.current_question.id,
                   gist_url: gist_url)
 
-      flash[:notice] = t('.success', url: gist_url)
+      flash[:notice] = "#{t('.success')} #{view_context.link_to gist_url.to_s, gist_url, target: '_blank'}"
     else
       flash[:alert] = t('.failure')
     end

@@ -61,7 +61,7 @@ ru:
       test_fail: 'Тест не пройден.'
       test_list: 'Список тестов'
     gist:
-      success: "Gist успешно сохранен! Ссылка на ваш gist: %{url}"
+      success: "Gist успешно сохранен! Ссылка на ваш gist: "
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:
