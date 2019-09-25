@@ -48,6 +48,7 @@ gem 'faraday'
 gem 'octokit', '~> 4.0'
 
 gem 'dotenv-rails', groups: %i[development test]
+gem 'octicons_helper'
 
 # UI
 
