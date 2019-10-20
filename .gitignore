@@ -32,3 +32,4 @@
 .idea
 .Gemfile.swp
 .env
+/vendor
