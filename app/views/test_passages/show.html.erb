@@ -1,5 +1,13 @@
 <h1><%= t('.passing_test', test: @test_passage.test.title) %></h1>
 
+<div class="progress">
+  <%= content_tag :div,
+                  '',
+                  class: 'progress-bar progress-bar-striped bg-info',
+                  data: { current_question_number: @test_passage.current_question_number,
+                          questions_count: @test_passage.test_questions_count } %>
+</div>
+
 <p>
   <b><%= t('.question') %> <%= @test_passage.current_question_number %> / <%= @test_passage.test_questions_count %></b>
 </p>
