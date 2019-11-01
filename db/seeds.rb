@@ -15,16 +15,19 @@ categories = Category.create!([
                               ])
 
 users = User.create!([
-                       { email: 'admin@gmail.com', password_digest: 'd9f073978ffd09757305530b5db8f9ef9b7c847e' },
-                       { email: 'new_user@gmail.com', password_digest: '0e0a769b87548216a154550336a6becaec6ac246' }
+                         { email: 'mike@mike.com', first_name: 'Mike', last_name: 'User', password: ENV['USER_PASSWORD'] }
                      ])
+
+admins = Admin.create!([
+                          { email: 'admin@admin.com', first_name: 'Admin', last_name: 'Admin', password: ENV['ADMIN_PASSWORD'] }
+])
 
 tests = Test.create!([
                        { title: 'Основы Ruby', level: 1, category: categories[0], author: users[0] },
                        { title: 'ООП в Ruby', level: 2, category: categories[0], author: users[0] },
-                       { title: 'Основы Ruby on Rails', level: 1, category: categories[1], author: users[0] },
-                       { title: 'Основы Git', level: 1, category: categories[2], author: users[0] },
-                       { title: 'Git branch', level: 2, category: categories[2], author: users[0] }
+                       { title: 'Основы Ruby on Rails', level: 1, category: categories[1], author: admins[0] },
+                       { title: 'Основы Git', level: 1, category: categories[2], author: admins[0] },
+                       { title: 'Git branch', level: 2, category: categories[2], author: admins[0] }
                      ])
 
 questions = Question.create!([
